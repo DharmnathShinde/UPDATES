@@ -1,1 +1,1 @@
-{daily # UPDATES}[https://dharmnathshinde.github.io/UPDATES/]
+#[daily  UPDATES](https://dharmnathshinde.github.io/UPDATES/)
