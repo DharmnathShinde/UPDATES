@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>reduce() in the javascript</h1>
+  <h2>process</h2>
+  <p>first i create object for demo</p>
+  <h1>code</h1>
+  <code>
+    paramete =[
+    {sub:"math",marks: 20},<br>
+    {sub:"physics",marks: 12},<br>
+    {sub:"biology", marks:20} <br>
+
+  ]
+const total= paramete.reduce((total ,mark)=>{ <br>
+  return mark.marks + total <br>
+},0) <br>
+document.write(total )
+
+  </code>
+<h2>OUTPUT</h2>
+
+</body>
+<script>
+paramete =[
+    {sub:"math",marks: 20},
+    {sub:"physics",marks: 12},
+    {sub:"biology", marks:20}
+
+  ]
+const total= paramete.reduce((total ,mark)=>{
+  return mark.marks + total
+},0)
+document.write(total )
+</script>
+</html>

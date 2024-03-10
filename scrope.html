@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+
+    .CODE{
+      background-color: #FCD537;
+      padding: 8%;
+      margin: 0;
+      color: #201D22;
+    }
+    body{
+      margin: 0;
+    
+    }
+  .op{
+     background-color: #ADC6E5;
+     padding: 8%;
+  }
+  </style>
+</head>
+<body>
+  <div class="CODE">
+    <h1>CODE</h1>
+<h2>
+  function display(){ <br>
+    let num=12;<br>
+    function dis(){<br>
+     num++<br>
+ return num;<br>
+    }<br>
+    return dis();<br>
+    console.log(num)<br>
+ 
+   }<br>
+ 
+ 
+   document.getElementById("exploser").innerHTML=display()<br>
+ {<br>
+     let s=6<br>
+   }<br>
+   console.log(s)<br>
+ 
+ //Local scope<br>
+ function local(){<br>
+   let s="display";<br>
+   let s="display";<br>
+   console.log(s)<br>
+ }
+ //  console.log(s)<br>
+ local()<br>
+</h2>
+</div>
+<div class="op">
+<H1>OUTPUT</H1>
+<h2>here is we display number which is declare in Outer function and use in inner function we simply called as closer property</h2>
+
+<h2 id="hello"></h2>
+</div>
+<script>
+  function display(){
+    let num=12;
+    function dis(){
+     num++
+ return num;
+    }
+    return dis();
+    console.log(num)
+ 
+   }
+   
+ 
+ document.getElementById("exploser").innerHTML=display()
+  {
+     let s=6
+   }
+   console.log(s)
+ 
+ //Local scope
+ function local(){
+   let s="display";
+    console.log(s)
+ }
+ //  console.log(s)
+ local()
+ 
+
+</script>
+</body>
+</html>
