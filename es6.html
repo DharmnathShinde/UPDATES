@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>es6</title>
+</head>
+<body>
+  <h1>class</h1>
+  <h2 id="stud"></h2>
+</body>
+<script>
+  class student{
+    constructor(name,roll){
+    this.name=name;
+    this.roll=roll;
+    }
+  }
+const stud1=new student("suraj",1)
+console.log(stud1)
+
+document.getElementById("stud").innerHTML=stud1.name+stud1.roll;
+</script>
+</html>

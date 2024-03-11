@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body style="color: #BDBFC5;">
+
+</body>
+<script>
+document.body.style.backgroundColor = "#4B5868";
+
+
+const struc=  document.createDocumentFragment();
+ const ele = struc.appendChild(document.createElement("ul"))
+let n= prompt("enter you list item no");
+
+ for(i=1;i<=n;i++){
+ const li =struc.appendChild(document.createElement("li"));
+let p= prompt("list name")
+ let i= li.innerText=p;
+}
+ document.body.appendChild(struc);
+</script>
+</html>
