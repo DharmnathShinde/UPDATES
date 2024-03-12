@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Methods of array</h1>
+    <h3>let arr=["one","two","three","four"]</h3>
+    <h3>second array let array2=["five","six","seven"]</h3>
+    <ol>
+      <li id="len"></li>
+      <li id="string"></li>
+      <li id="concat"></li>
+      <li id="join"></li>
+      <li id="push"></li>
+      <li id="pop"></li>
+      <li id="shift"></li>
+      <li id="unshift"></li>
+      <li id="copy" ></li>
+      <li id="splice"></li>
+      <li id="slice"></li>
+    </ol>
+    <h2>Array sort</h2>
+    <ol>
+      <li id="index"></li>
+    <li id="reverse"></li> 
+  <li id="max"></li>  </ol>
+  </body>
+  <script>
+
+
+
+
+    let arr = ["one", "two", "three", "four"];
+    let arr2 = ["five", "six", "seven"];
+    let len = arr.length;
+    document.getElementById("len").innerText = "lenght Of array will be " + len;
+    let str = arr.toString();
+    document.getElementById("string").innerText =
+      "String format Of array will be => " + str;
+    let concat = arr.concat(arr2);
+    document.getElementById("concat").innerText =
+      "array conctination will be => " + concat;
+    let join = concat.join("=>");
+    document.getElementById("join").innerText = "array join method  =>" + join;
+    arr2.push("eight");
+    document.getElementById("push").innerText =
+      "insert eight in array 2 => " + arr2;
+    arr2.pop();
+    document.getElementById("pop").innerText = "pop operation  " + arr2;
+    arr2.shift();
+    document.getElementById("shift").innerText = "shift operation " + arr2;
+    arr2.unshift("five");
+    document.getElementById("unshift").innerText =
+      "unshift shift operation " + arr2;
+    arr2.copyWithin(0, 1);
+    document.getElementById("copy").innerText= "copy ele first on 2 " + arr2;
+    arr.splice(0,0,"zero")
+    document.getElementById("splice").innerText= "copy using splice ele first on first " + arr;
+    let arr3=arr.slice(3)
+    document.getElementById("slice").innerText="slice operation on array " +arr3
+
+
+    let index=arr.sort();
+  document.getElementById("index").innerHTML=index;
+    arr.reverse()
+    document.getElementById("reverse").innerHTML=arr;
+    let arr4=[1,22,11,45]
+    let max=Math.max.apply(null, arr4)
+    document.getElementById("max").innerHTML=max;
+
+  </script>
+</html>

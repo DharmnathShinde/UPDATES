@@ -11,16 +11,16 @@
 <script>
 document.body.style.backgroundColor = "#4B5868";
 
+const documentFragment = document.createDocumentFragment();
+const listElement = documentFragment.appendChild(document.createElement("ul"));
+let numberOfItems = prompt("Enter the number of list items:");
 
-const struc=  document.createDocumentFragment();
- const ele = struc.appendChild(document.createElement("ul"))
-let n= prompt("enter you list item no");
-
- for(i=1;i<=n;i++){
- const li =struc.appendChild(document.createElement("li"));
-let p= prompt("list name")
- let i= li.innerText=p;
+for (let i = 1; i <= numberOfItems; i++) {
+  const listItem = documentFragment.appendChild(document.createElement("li"));
+  let itemName = prompt("Enter the name of list item " + i);
+  listItem.innerText = itemName;
 }
- document.body.appendChild(struc);
+
+document.body.appendChild(documentFragment);
 </script>
 </html>
