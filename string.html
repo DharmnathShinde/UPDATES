@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #f4d6cb;
+        padding-left: 10%;
+        color: #090809;
+      }
+      .ip {
+        display: grid;
+        grid-template-columns: 0.5fr 1fr;
+        grid-column-gap: 100px;
+      }
+      h1 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>string properties</h1>
+    <h3>Enter your string</h3>
+    <input type="text" id="ip" />
+
+    <button onclick="string()">Submit</button>
+    <h3>1]Lenght of your string will be</h3>
+    <h3 id="length">=></h3>
+    <h3>2]suppose we find the char at position 3 which is</h3>
+    <h3 id="position">=></h3>
+    <h3>3]Slice</h3>
+    <h3 id="slice">=></h3>
+    <h3>4]pad string</h3>
+    <h3 id="pad">=></h3>
+    <h3>5]pad end</h3>
+    <h3 id="padend">=></h3>
+    <h3>6]repet</h3>
+    <h3 id="repeat">=></h3>
+    <h3>7]split</h3>
+    <h3 id="split"></h3>
+  </body>
+  <script>
+    let text = "3";
+    let pad = text.padStart(3, "y");
+    let padend = text.padEnd(3, "y");
+    document.getElementById("pad").innerHTML = "=>" + pad;
+    document.getElementById("padend").innerHTML = "=>" + padend;
+
+    function string() {
+      let name = document.getElementById("ip");
+      let value = name.value;
+      let len = value.length;
+      document.getElementById("length").innerHTML = "=>" + len;
+      let position = value.charAt(2);
+      document.getElementById("position").innerHTML = "=>" + position;
+      let slice = value.slice(3, 6);
+      document.getElementById("slice").innerHTML = "=>" + slice;
+      let repeat = value.repeat(5);
+      document.getElementById("repeat").innerHTML = "=>" + repeat;
+      let string = value.split(" ");
+      document.getElementById("split").innerHTML = "=>" + string;
+    }
+  </script>
+</html>

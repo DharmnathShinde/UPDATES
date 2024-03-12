@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Node list using Entier()</h1>
+    <h3 id="result"></h3>
+  </body>
+  <script>
+    const node = document.createElement("div");
+    const para = document.createElement("p");
+    const text = document.createTextNode("Hello ");
+    const anchor = document.createElement("a");
+    para.appendChild(text);
+    node.appendChild(para);
+    node.appendChild(anchor);
+    document.body.append(node);
+    const list = node.childNodes;
+    for (let child of list.entries()) {
+      console.log(child);
+    }
+  </script>
+</html>
