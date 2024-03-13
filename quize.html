@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz</title>
+  <style>
+    body {
+      background-color: #B0D6F8;
+    }
+
+    .heading {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 class="heading">Quiz</h1>
+  <ol>
+    <li> Write a program to create an HTML form, capture the form data using JavaScript, and then display that data on
+      the HTML page</li>
+
+    <form action="">
+      <fieldset>
+        <legend>Input</legend>
+        <input type="text" id="inputField">
+        <input type="button" value="submit" onclick="getData()">
+        <label for="inputField"><b>Enter Any string</b> </label>
+      </fieldset>
+    </form>
+
+    <fieldset>
+      <legend>Output</legend>
+      <h3 id="output"> </h3>
+    </fieldset>
+
+    <hr>
+
+    <li> Write a JavaScript program that iterates numbers from 1 to 20 using a for loop. The program should stop the
+      loop (using the break statement) as soon as it encounters a number that is divisible by 7.</li>
+    <button id="generateButton" onclick="generateNumbers()">Generate Number</button>
+    <div id="numbersTable"></div>
+
+    <hr>
+
+    <li> Write a JavaScript program that iterates numbers from 1 to 10 using a for loop. The program should skip the
+      iteration (using the continue statement) when it encounters number 5 and continue with the next</li>
+    <button id="skipButton" onclick="generateSkipping()">Generate Number</button>
+    <div id="skippedTable"></div>
+
+    <hr>
+
+    <li id="object"> Write a JavaScript program that uses a 'for...in' loop to iterate over the properties of an object.
+      Create an object named 'student' with properties 'name' as 'John' and 'age' as '10'. Print the property names and
+      their respective values.</li>
+    <hr>
+
+    <li id="forOf">Write a JavaScript program that uses a 'for...of' loop to iterate over an array. Create an array of
+      three colors - 'red', 'green', and 'blue'. Print each color.</li>
+    <button id="forButton" onclick="iterateColors()">Click here</button>
+
+    <hr>
+
+    <li id="carObj">Create an object named 'car' with properties 'make' as 'Toyota', 'model' as 'Camry', and 'year' as
+      '2020'. Use a 'for...in' loop to print the property names and their respective values.</li>
+    <button id="carButton" onclick="displayCarDetails()"> Car Details</button>
+
+    <hr>
+
+    <li> Write a JavaScript program that creates a button and add a click event listener to change background color when it's clicked.</li>
+     <button onclick="changeBgColor()">Click here</button>
+  </ol>
+
+  <script>
+    function getData() {
+      let inputField = document.getElementById("inputField");
+      let value = inputField.value
+      document.getElementById("output").innerHTML = value;
+    }
+
+    function generateNumbers() {
+      let numbersTable = "<table>";
+      numbersTable += "<tr><th>Number</th>,</tr>"
+      for (let i = 1; i <= 20; i++) {
+        if (i % 7 !== 0) {
+          numbersTable += "<tr><td>" + i + "</td></tr>"
+        } else {
+          break;
+        }
+      }
+      numbersTable += "</table>"
+      document.getElementById("numbersTable").innerHTML = numbersTable;
+      document.getElementById("generateButton").style.display = "none";
+    }
+
+    function generateSkipping() {
+      let skippedTable = "<table>";
+      skippedTable += "<tr><th>Number</th>,</tr>"
+      for (let i = 1; i <= 10; i++) {
+        if (i !== 5) {
+          skippedTable += "<tr><td>" + i + "</td></tr>"
+        } else {
+          continue;
+        }
+      }
+      skippedTable += "</table>"
+      document.getElementById("skippedTable").innerHTML = skippedTable;
+      document.getElementById("skipButton").style.display = "none";
+    }
+
+    function displayObjectProperties() {
+      const student = {
+        name: "John",
+        age: "10",
+      }
+
+      let mainNode = document.createElement("ol")
+      for (const property in student) {
+        let node = document.createElement("li")
+        node.textContent = `${property} ${student[property]}`;
+        mainNode.appendChild(node)
+      }
+      document.getElementById("object").appendChild(mainNode);
+    }
+    displayObjectProperties();
+
+    function iterateColors() {
+      let colors = ["red", "green", "blue"]
+      let mainNode = document.createElement("ol")
+      for (let color of colors) {
+        let node = document.createElement("li")
+        node.textContent = `${color}`;
+        mainNode.appendChild(node)
+      }
+      document.getElementById("forOf").appendChild(mainNode);
+      document.getElementById("forButton").style.display = "none"
+    }
+
+    function displayCarDetails() {
+      const carDetails = {
+        make: "Toyota",
+        model: "Camry",
+        year: "2022"
+      }
+      let mainNode = document.createElement("ol")
+      for (const property in carDetails) {
+        let node = document.createElement("li")
+        node.textContent = `${property} ${carDetails[property]}`;
+        mainNode.appendChild(node)
+      }
+      document.getElementById("carObj").appendChild(mainNode);
+      document.getElementById("carButton").style.display = "none"
+    }
+
+    let bgColorFlag = 0;
+
+    function changeBgColor() {
+      if (bgColorFlag == 0) {
+        document.body.style.background = "#DBEDDD";
+        bgColorFlag = 1;
+      } else {
+        document.body.style.background = "#B0D6F8";
+        bgColorFlag = 0;
+      }
+    }
+    
+  </script>
+
+</body>
+
+</html>
