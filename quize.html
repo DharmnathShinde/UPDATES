@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>quize</title>
+</head>
+<body>
+  <ol>
+    <li> Write a program to create an HTML form, capture the form data using JavaScript, and then display that data on the HTML page</li>
+   
+    <form action="">
+    <fieldset> 
+      <legend>Input</legend>
+       <input type="text" id="input">
+       <input type="button" value="submit" onclick="getdata()">
+      <label for="input"><b>Enter Any string</b> </label>
+     </form>
+    </fieldset>
+    <fieldset>
+      <legend>Outpput</legend>
+      <h3 id="output"> </h3>
+    </fieldset>
+  <hr>
+  <li> Write a JavaScript program that iterates numbers from 1 to 20 using a for loop. The program should stop the loop (using the break statement) as soon as it encounters a number that is divisible by 7.</li>
+   <button onclick="generate()">Generate Number</button>
+   <div id="table"></div>
+   <hr>
+  <li>Write a JavaScript program that iterates numbers from 1 to 10 using a for loop. The program should skip the iteration (using the continue statement) when it encounters number 5 and continue with the next</li>
+  <button onclick="number()">Generate Number</button>
+  <div id="table2"></div>
+</ol>
+
+
+  
+</body>
+<script>
+  function getdata(){
+ let input =document.getElementById("input");
+let value=input.value
+document.getElementById("output").innerHTML=value;  
+}
+function generate(){
+ let table="<table>";
+  table += "<tr><th>Number</th>,</tr>"
+  for (i=1;i<=20;i++)
+  { if(i % 7 !== 0){
+    table += "<tr><td>"+i+"</td></tr>"
+  }
+  else{
+     break;
+      } 
+  }
+  table+="</table>"
+  document.getElementById("table").innerHTML=table;
+}
+ 
+function number(){
+  let table="<table>";
+  table += "<tr><th>Number</th>,</tr>"
+  for (i=1;i<=10;i++)
+  { if(i !==5 ){
+    table += "<tr><td>"+i+"</td></tr>"
+  }
+  else{
+     continue;
+      } 
+  }
+  table+="</table>"
+  document.getElementById("table2").innerHTML=table;
+}
+ </script>
+</html>
